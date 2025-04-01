@@ -11,7 +11,7 @@ const Work = () => {
         {
             title: 'Digital Canteen',
             tags: ['React Js', 'Tailwind CSS', 'Node.js', 'Express', 'Excel(Prior)', 'MongoDB Atlas'],
-            projectLink : 'https://github.com/Boopathy133/Digital-Canteen.git'
+            projectLink : 'https://github.com/Mukilanbalakrishnan/Digital-Canteen.git'
         },
         {
             title: 'EV-Battery-Reuse',
