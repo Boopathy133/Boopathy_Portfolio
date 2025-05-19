@@ -17,12 +17,12 @@ const Hero = () => {
                             <span className="relative w-2 h-2 rounded-full bg-blue-400">
                                 <span className="absolute inset-0 rounded-full bg-blue-400 animate-ping"></span>
                             </span>
-                            Available for work
+                             {/*Available for work */}
+                            At Azhizen Solutions
                         </div>
                     </div>
                         <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10">
-                            Hi! <br /> I&apos;am Boopathy <br />
-                            <h4> At Azhizen Solutions</h4>
+                            Hi! <br /> I&apos;am Boopathy
                         </h2>
                     <div className="flex items-center gap-3">
                         <ButtonPrimary label="Resume" href="" />
