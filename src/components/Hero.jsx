@@ -21,7 +21,8 @@ const Hero = () => {
                         </div>
                     </div>
                         <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10">
-                            Hi! <br /> I&apos;am Boopathy
+                            Hi! <br /> I&apos;am Boopathy <br />
+                            <h4> At Azhizen Solutions</h4>
                         </h2>
                     <div className="flex items-center gap-3">
                         <ButtonPrimary label="Resume" href="" />
