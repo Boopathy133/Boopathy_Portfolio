@@ -35,9 +35,9 @@ const ProjectCard = ({ id, imgSrc, title, tags, projectLink, classes }) => {
 
                 </div>
 
-                <div className="w-11 h-11 rounded-lg grid place-items-center bg-sky-400 text-zinc-950 shrink-0 cursor-pointer" onClick={() => navigate(`/projects/${id}`)}>
+                <div className="w-11 h-11 rounded-lg grid place-items-center bg-sky-400 text-zinc-950 shrink-0 cursor-pointer" >
 
-                    <span className="material-symbols-rounded" aria-hidden='true' >
+                    <span className="material-symbols-rounded" aria-hidden='true' onClick={() => navigate(`/projects/${id}`)}>
                         arrow_outward
                     </span>
 

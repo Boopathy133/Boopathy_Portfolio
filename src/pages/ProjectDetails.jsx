@@ -32,7 +32,7 @@ const ProjectDetails = () => {
   const [isVisible, setIsVisible] = useState(false);
 
 
-  const [activeCollab, setActiveCollab] = useState(null);
+  const [activeCollab, setActiveCollab] = useState();
 
   const openMobileCard = (collab) => {
     setActiveCollab(collab);
@@ -601,9 +601,7 @@ const ProjectDetails = () => {
                       return (
                         <motion.div
                           key={phase.phase + index}
-                          className={`relative flex w-full 
-                ${isLeft ? "md:justify-start" : "md:justify-end"} 
-                justify-center`}
+                          className={`relative flex w-full ${isLeft ? "md:justify-start" : "md:justify-end"} justify-center`}
                           initial={{ opacity: 0, y: 80 }}
                           whileInView={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.7, delay: index * 0.15 }}
@@ -612,9 +610,7 @@ const ProjectDetails = () => {
 
                           {/* STEP NUMBER — CENTERED ALWAYS */}
                           <motion.div
-                            className="absolute left-1/2 -translate-x-1/2 w-7 h-7 
-                rounded-full bg-white text-primary flex items-center justify-center 
-                z-20 border-4 border-background shadow"
+                            className="absolute left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-white text-primary flex items-center justify-center z-20 border-4 border-background shadow"
                             initial={{ scale: 0 }}
                             whileInView={{ scale: 1 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -627,12 +623,7 @@ const ProjectDetails = () => {
 
                           {/* TIMELINE CARD */}
                           <motion.div
-                            className={`
-                  relative p-6 bg-card border border-border rounded-2xl shadow-md 
-                  hover:shadow-xl transition-all duration-300
-                  w-full md:w-[46%]
-                  ${isLeft ? "md:mr-auto md:-translate-x-6" : "md:ml-auto md:translate-x-6"}
-                `}
+                            className={`relative p-6 bg-card border border-border rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 w-full md:w-[46%] ${isLeft ? "md:mr-auto md:-translate-x-6" : "md:ml-auto md:translate-x-6"}`}
                             initial={{ opacity: 0, x: isLeft ? -60 : 60 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true, amount: 0.6 }}
@@ -652,8 +643,7 @@ const ProjectDetails = () => {
 
                             {/* Curved connector — HIDDEN ON MOBILE */}
                             <motion.div
-                              className={`absolute top-1/2 -translate-y-1/2 hidden md:block 
-                    ${isLeft ? "right-[-35px]" : "left-[-35px]"}`}
+                              className={`absolute top-1/2 -translate-y-1/2 hidden md:block ${isLeft ? "right-[-35px]" : "left-[-35px]"}`}
                               initial={{ opacity: 0, x: isLeft ? -20 : 20 }}
                               whileInView={{ opacity: 1, x: 0 }}
                               transition={{ duration: 0.6 }}
@@ -864,21 +854,24 @@ const ProjectDetails = () => {
                               <img
                                 src={`https://github.com/${collab.username}.png`}
                                 alt={collab.name}
-                                className="w-10 h-10 rounded-full border-2 border-white shadow object-cover cursor-pointer transition-transform duration-300 hover:scale-110
-                  group-hover:z-10
-                  md:cursor-pointer"
+                                className="w-10 h-10 rounded-full border-2 border-white shadow cursor-pointer object-cover transition-transform duration-300 hover:scale-110 relative z-0 group-hover:z-10" // ✅ Bring to front on hover
                                 onClick={() => openMobileCard(collab)} // OPEN on mobile
                               />
 
                               {/* DESKTOP Hover Card */}
                               <div
-                                className="hidden md:block absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 
-                  w-56 bg-white text-gray-800 rounded-xl shadow-lg p-3 opacity-0 invisible 
-                  group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
+                                className="hidden md:block absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-56 bg-white text-gray-800 rounded-xl shadow-lg p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
                               >
                                 <div className="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white rotate-45 shadow-md"></div>
 
-                                <div className="font-semibold text-sm mb-2">{collab.name}</div>
+                                <div className="flex place-items-center justify-around gap-4 mb-3">
+                                  <div className="font-semibold text-sm mb-2">{collab.name}</div>
+                                  <img
+                                    src={`https://github.com/${collab.username}.png`}
+                                    className="w-10 h-10 rounded-full border-2 border-gray-200 shadow"
+                                  />
+
+                                </div>
                                 <div className="flex flex-col gap-2 text-xs">
                                   {collab.linkedin && (
                                     <a
@@ -931,14 +924,10 @@ const ProjectDetails = () => {
                         ></div>
 
                         {/* Bottom Card */}
-                        <div
-                          className="absolute bottom-0 left-0 w-full bg-white rounded-t-2xl p-5 shadow-xl animate-slide-up"
-                        >
+                        <div className="absolute bottom-0 left-0 w-full bg-white rounded-t-2xl p-5 shadow-xl animate-slide-up">
                           <button
                             className="absolute top-3 right-4 text-xl font-bold text-gray-700"
-                            onClick={closeMobileCard}
-                          >
-                            ✕
+                            onClick={closeMobileCard}>✕
                           </button>
 
                           <div className="flex items-center gap-4">
@@ -946,10 +935,26 @@ const ProjectDetails = () => {
                               src={`https://github.com/${activeCollab.username}.png`}
                               className="w-14 h-14 rounded-full border-2 border-gray-200 shadow"
                             />
-                            <h3 className="text-lg font-semibold">{activeCollab.name}</h3>
+                            <h3 className="text-lg font-semibold text-black">{activeCollab?.name}</h3>
+                            {activeCollab.username}
                           </div>
 
-                          <div className="mt-4 flex flex-col gap-3 text-sm">
+
+
+
+                          <div className="mt-4 flex flex-col gap-3 text-lg">
+                            {activeCollab.portfolio && (
+                              <a
+                                href={activeCollab.portfolio}
+                                target="_blank"
+                                className="flex items-center gap-3 text-blue-600"
+                              >
+                                <BsGlobe />
+                                Portfolio
+                              </a>
+                            )}
+
+
                             {activeCollab.linkedin && (
                               <a
                                 href={activeCollab.linkedin}
@@ -961,16 +966,6 @@ const ProjectDetails = () => {
                               </a>
                             )}
 
-                            {activeCollab.portfolio && (
-                              <a
-                                href={activeCollab.portfolio}
-                                target="_blank"
-                                className="flex items-center gap-3 text-blue-600"
-                              >
-                                <BsGlobe />
-                                Portfolio
-                              </a>
-                            )}
 
                             <a
                               href={`https://github.com/${activeCollab.username}`}
@@ -986,15 +981,7 @@ const ProjectDetails = () => {
                     )}
 
                     {/* Animation */}
-                    <style>{`
-        @keyframes slide-up {
-          from { transform: translateY(100%); }
-          to { transform: translateY(0); }
-        }
-        .animate-slide-up {
-          animation: slide-up 0.3s ease-out;
-        }
-      `}</style>
+                    <style>{`@keyframes slide-up {from { transform: translateY(100%); }to { transform: translateY(0); }}.animate-slide-up {animation: slide-up 0.3s ease-out;}`}</style>
                   </div>
                 </CardContent>
               </Card>
