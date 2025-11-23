@@ -25,8 +25,8 @@ const Hero = () => {
                             Hi! <br /> I&apos;am Boopathy
                         </h2>
                     <div className="flex items-center gap-3">
-                        <ButtonPrimary label="Resume" href="" />
-                        <ButtoonOutline href="#about" label="Sroll down" icon="arrow_downward" />
+                        <ButtonPrimary label="Resume" href="/BOOPATHY IT KSRIET.pdf" target="_blank" />
+                        {/* <ButtoonOutline href="#about" label="Sroll down" icon="arrow_downward" /> */}
                     </div>
                 </div>
                 <div className="hidden lg:block">
