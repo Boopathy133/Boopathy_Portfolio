@@ -16,7 +16,7 @@ export const CompletedProjects = [
         fullDescription: "A comprehensive e-commerce solution built with React and Node.js, featuring real-time inventory management, secure payment processing through Stripe, and a responsive shopping experience.",
         detailedDescription: "This enterprise-grade e-commerce platform was designed to handle high-volume transactions while maintaining exceptional performance and security. Built with a microservices architecture, the platform integrates seamlessly with payment gateways, inventory systems, and shipping providers. The admin dashboard provides real-time analytics, inventory management, and customer insights. Special attention was paid to mobile optimization, resulting in a 40% increase in mobile conversions.",
         githubUrl: "https://github.com/Boopathy133/E-Commerce_react.git",
-        liveUrl: "https://demo-ecommerce.example.com",
+        // liveUrl: "https://demo-ecommerce.example.com",
         linkedinUrl: "https://www.linkedin.com/in/yourprofile",
         role: "Frontend Developement",
         duration: "3 Weeks",
@@ -82,11 +82,11 @@ export const CompletedProjects = [
 
         ],
         timeline: [
-            { phase: "0 – 25 minutes", description: ["Understand the problem statement and identify dashboard goals.", "\nResearch user needs and define key features."] },
-            { phase: "25 – 60 minutes", description: ["Sketch initial layout: charts, widgets, navigation flow.", "\nCreate low-fidelity wireframes in Figma."] },
-            { phase: "60 – 90 minutes", description: "Convert wireframes into high-fidelity UI screens." },
-            { phase: "90 - 110", description: "Design interactive components and micro-interactions." },
-            { phase: "110 - 120", description: "Final review and export of Figma design screens." }
+            { phase: "0 - 25 minutes", description: ["Understand the problem statement and identify dashboard goals.", "\nResearch user needs and define key features."] },
+            { phase: "25 - 60 minutes", description: ["Sketch initial layout: charts, widgets, navigation flow.", "\nCreate low-fidelity wireframes in Figma."] },
+            { phase: "60 - 90 minutes", description: "Convert wireframes into high-fidelity UI screens." },
+            { phase: "90 - 110 minutes", description: "Design interactive components and micro-interactions." },
+            { phase: "110 - 120 minutes", description: "Final review and export of Figma design screens." }
         ],
 
         // challenges: [
@@ -101,12 +101,12 @@ export const CompletedProjects = [
         imgSrc: Collaborative_Design_Tool,
         title: 'Collaborative Design Tool',
         tags: ['Design', 'Figma', 'Figma-UI'],
-        projectLink: 'https://github.com/Boopathy133/CoderOne-Project-2.git',
+        projectLink: 'https://www.figma.com/design/iw3aMYOsd8O69O8ogE4tk5/Collaborative-Desing-Tool?node-id=3-502',
         shortDescription: "A web-based collaborative design tool that enables real-time editing, version control, and seamless teamwork for remote design teams, improving communication and enhancing productivity.",
         fullDescription: "The project focuses on building an intuitive collaborative design platform that allows remote teams to work together in real time. It includes features such as live co-editing, version history, and integrated feedback tools. The system supports multiple design formats and syncs smoothly with design software. It aims to simplify workflows, improve communication, and ensure a productive design process.",
         detailedDescription: "The Collaborative Design Tool project aims to develop a powerful web-based platform that enables design teams to collaborate seamlessly from any location. The system supports real-time co-editing, allowing multiple designers to work simultaneously on the same project while maintaining clear version control and edit history. Integrated feedback features ensure smooth communication, enabling team members to comment, review, and refine designs efficiently. The platform supports various design formats and offers integration with popular design software, providing a flexible and unified workspace. User research will guide the interface design to ensure it is intuitive, efficient, and aligned with actual team workflows. Through iterative testing and refinement, the tool will enhance productivity, improve collaborative creativity, and streamline the entire design process from ideation to completion.",
         githubUrl: "https://github.com/Boopathy133/CoderOne-Project-2.git",
-        liveUrl: "https://demo-ecommerce.example.com",
+        liveUrl: "https://www.figma.com/design/iw3aMYOsd8O69O8ogE4tk5/Collaborative-Desing-Tool?node-id=3-502",
         // linkedinUrl: "https://www.linkedin.com/in/yourprofile",
         role: "UI / UX Designer",
         duration: "2 Hours",

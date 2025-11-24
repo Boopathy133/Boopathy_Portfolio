@@ -264,7 +264,7 @@ const ProjectDetails = () => {
 
       <div className="relative w-full h-[70vh] overflow-hidden">
         {/* New Gradient Overlay – stronger fade at bottom */}
-        <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-black/10 via-black/30 via-40% to-black/80"
+        <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-black/20 via-black/50 via-20% to-black/80"
         />
 
         {/* Optional: Slight top fade for better aesthetics */}
@@ -297,7 +297,7 @@ const ProjectDetails = () => {
                 {project.title}
               </h1> */}
 
-              <h1 className="relative text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-2xl">
+              <h1 className="relative text-5xl md:text-7xl font-bold mb-6 text-amber-50 drop-shadow-2xl">
                 <span className="relative z-10">{project.title}</span>
 
                 {/* Blur behind text */}
@@ -306,7 +306,7 @@ const ProjectDetails = () => {
 
 
 
-              <p className="md:text-1xl text-white/95 drop-shadow-lg">
+              <p className="md:text-1xl text-amber-50 drop-shadow-lg">
                 {project.shortDescription}
               </p>
 
@@ -315,7 +315,7 @@ const ProjectDetails = () => {
                 {project.githubUrl && (
                   <Button asChild size="lg" className="group shadow-lg bg-white/80 backdrop-blur-sm hover:bg-white/70 text-black font-bold">
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-2 h-5 w-5 transition-transform" />
+                      <Github className="mr-2 h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                       View Code
                     </a>
                   </Button>
@@ -523,24 +523,6 @@ const ProjectDetails = () => {
                               transition={{ duration: 0.6 }}
                               viewport={{ once: true }}
                             >
-                              <div className="w-7 h-6 overflow-visible">
-                                <svg width="40" height="30">
-                                  <motion.path
-                                    d={
-                                      isLeft
-                                        ? "M 0 15 Q 20 0 40 15"
-                                        : "M 40 15 Q 20 0 0 15"
-                                    }
-                                    stroke="#6366f1"
-                                    strokeWidth="3"
-                                    fill="transparent"
-                                    initial={{ pathLength: 0 }}
-                                    whileInView={{ pathLength: 1 }}
-                                    transition={{ duration: 0.6, ease: "easeOut" }}
-                                    viewport={{ once: true }}
-                                  />
-                                </svg>
-                              </div>
                             </motion.div>
                           </motion.div>
                         </motion.div>
@@ -559,7 +541,6 @@ const ProjectDetails = () => {
                 ref={ref}
                 className="relative mb-20 overflow-hidden py-10"
               >
-                {/* Header */}
                 <div className="flex items-center gap-3 mb-10">
                   <Calendar className="h-7 w-7 text-primary" />
                   <h2 className="text-3xl font-bold tracking-tight">
@@ -569,7 +550,7 @@ const ProjectDetails = () => {
 
                 <div ref={containerRef} className="relative">
 
-                  {/* Wavy Line — HIDDEN IN MOBILE */}
+                  {/* Curved line — hidden on mobile */}
                   <svg
                     className="absolute left-1/2 top-0 -translate-x-1/2 h-full w-32 opacity-40 hidden md:block"
                     viewBox="0 0 100 500"
@@ -593,24 +574,27 @@ const ProjectDetails = () => {
                     </defs>
                   </svg>
 
-                  {/* TIMELINE ITEMS */}
-                  <div className="relative space-y-28">
+                  <div className="relative space-y-20 md:space-y-28">
                     {project.timeline.map((phase, index) => {
                       const isLeft = index % 2 === 0;
 
                       return (
                         <motion.div
                           key={phase.phase + index}
-                          className={`relative flex w-full ${isLeft ? "md:justify-start" : "md:justify-end"} justify-center`}
+                          className={`relative flex w-full 
+                ${isLeft ? "justify-start" : "justify-end"} 
+                md:flex-row 
+                flex-col
+              `}
                           initial={{ opacity: 0, y: 80 }}
                           whileInView={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.7, delay: index * 0.15 }}
                           viewport={{ once: true, amount: 0.4 }}
                         >
 
-                          {/* STEP NUMBER — CENTERED ALWAYS */}
+                          {/* Center Dot — hidden on mobile */}
                           <motion.div
-                            className="absolute left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-white text-primary flex items-center justify-center z-20 border-4 border-background shadow"
+                            className="absolute left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-white text-primary items-center justify-center z-20 border-4 border-background shadow hidden md:flex"
                             initial={{ scale: 0 }}
                             whileInView={{ scale: 1 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -621,9 +605,9 @@ const ProjectDetails = () => {
                             </span>
                           </motion.div>
 
-                          {/* TIMELINE CARD */}
+                          {/* CARD */}
                           <motion.div
-                            className={`relative p-6 bg-card border border-border rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 w-full md:w-[46%] ${isLeft ? "md:mr-auto md:-translate-x-6" : "md:ml-auto md:translate-x-6"}`}
+                            className={`relative p-6 bg-card border border-border rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 md:w-[46%] ${isLeft ? "md:mr-auto md:-translate-x-6" : "md:ml-auto md:translate-x-6"} w-full mx-auto`}
                             initial={{ opacity: 0, x: isLeft ? -60 : 60 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true, amount: 0.6 }}
@@ -641,32 +625,14 @@ const ProjectDetails = () => {
                               {phase.description}
                             </p>
 
-                            {/* Curved connector — HIDDEN ON MOBILE */}
+                            {/* Arrow connector — hidden on mobile */}
                             <motion.div
-                              className={`absolute top-1/2 -translate-y-1/2 hidden md:block ${isLeft ? "right-[-35px]" : "left-[-35px]"}`}
+                              className={`absolute top-1/2 -translate-y-1/2 hidden md:block ${isLeft ? "right-[-35px]" : "left-[-35px]"} `}
                               initial={{ opacity: 0, x: isLeft ? -20 : 20 }}
                               whileInView={{ opacity: 1, x: 0 }}
                               transition={{ duration: 0.6 }}
                               viewport={{ once: true }}
-                            >
-                              <div className="w-7 h-6 overflow-visible">
-                                <svg width="40" height="30">
-                                  <motion.path
-                                    d={isLeft
-                                      ? "M 0 15 Q 20 0 40 15"
-                                      : "M 40 15 Q 20 0 0 15"
-                                    }
-                                    stroke="#6366f1"
-                                    strokeWidth="3"
-                                    fill="transparent"
-                                    initial={{ pathLength: 0 }}
-                                    whileInView={{ pathLength: 1 }}
-                                    transition={{ duration: 0.6, ease: "easeOut" }}
-                                    viewport={{ once: true }}
-                                  />
-                                </svg>
-                              </div>
-                            </motion.div>
+                            />
                           </motion.div>
                         </motion.div>
                       );
@@ -675,6 +641,12 @@ const ProjectDetails = () => {
                 </div>
               </section>
             )}
+
+
+
+
+
+
 
 
 

@@ -8,8 +8,8 @@ const SkillCard = ({ imgSrc, label, desc, classes }) => {
             <img src={imgSrc} alt={label} width={32} height={32} />
         </figure>
         <div>
-            <h3>{label}</h3>
-            <p className="text-zinc-400 text-sm">{desc}</p>
+            <h3 className='text-sm font-semibold'>{label}</h3>
+            <p className="text-zinc-400 text-[12px]">{desc}</p>
         </div>
     </div>
 
