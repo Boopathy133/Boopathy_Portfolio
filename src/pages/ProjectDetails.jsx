@@ -601,26 +601,24 @@ const ProjectDetails = () => {
               </section>)}
 
             {/* CTA */}
-            <section className="mt-10 p-8 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl text-center animate-fade-in" style={{ animationDelay: "1.1s" }}>
+            {/* <section className="mt-10 p-8 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl text-center animate-fade-in" style={{ animationDelay: "1.1s" }}>
               <h3 className="text-2xl font-bold mb-3">Like what you see?</h3>
               <p className="text-muted-foreground mb-6">Let's discuss my next project</p>
               <div className="flex flex-wrap gap-3 justify-center">
                 <Button size="lg" onClick={() => navigate(-1)} variant="outline">
-                  {/* <Link to="/portfolio"> */}
                   <ArrowLeft className="mr-2 h-4 w-4 " />
                   More Projects
-                  {/* </Link> */}
                 </Button>
-                {/* {project.linkedinUrl && (
+                {project.linkedinUrl && (
                   <Button asChild size="lg">
                     <a href={project.linkedinUrl} target="_blank" rel="noopener noreferrer">
                       <Linkedin className="mr-2 h-4 w-4" />
                       Get in Touch
                     </a>
                   </Button>
-                )} */}
+                )}
               </div>
-            </section>
+            </section> */}
           </article>
 
           {/* Sticky Sidebar */}
@@ -906,6 +904,10 @@ const ProjectDetails = () => {
                         </a>
                       </Button>
                     )}
+                    <Button size="lg" onClick={() => navigate(-1)} variant="outline" className="w-full justify-start group">
+                      <ArrowLeft className="mr-2 h-4 w-full " />
+                      More Projects
+                    </Button>
                     {project.liveUrl && (
                       <Button asChild variant="outline" className="w-full justify-start group">
                         <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
