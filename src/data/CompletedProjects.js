@@ -142,37 +142,37 @@ export const CompletedProjects = [
         tags: ['Design', 'Figma'],
         // projectLink: '',
         shortDescription: "This is a online website which they can sell or buy different category of clothes like Top Wears, Bottom Wears for Men, women and kids.",
-        fullDescription: "A comprehensive e-commerce solution built with React and Node.js, featuring real-time inventory management, secure payment processing through Stripe, and a responsive shopping experience.",
-        detailedDescription: "This enterprise-grade e-commerce platform was designed to handle high-volume transactions while maintaining exceptional performance and security. Built with a microservices architecture, the platform integrates seamlessly with payment gateways, inventory systems, and shipping providers. The admin dashboard provides real-time analytics, inventory management, and customer insights. Special attention was paid to mobile optimization, resulting in a 40% increase in mobile conversions.",
-        githubUrl: "https://github.com/yourusername/ecommerce-platform",
-        liveUrl: "https://demo-ecommerce.example.com",
-        linkedinUrl: "https://www.linkedin.com/in/yourprofile",
-        role: "Full-Stack Developer & Tech Lead",
-        duration: "6 months",
-        teamSize: "5 developers",
+        fullDescription: "A simple sports academy landing page designed using Figma, featuring a clean layout, engaging visuals, and clear calls to action to attract potential students and parents.",
+        // detailedDescription: "This enterprise-grade e-commerce platform was designed to handle high-volume transactions while maintaining exceptional performance and security. Built with a microservices architecture, the platform integrates seamlessly with payment gateways, inventory systems, and shipping providers. The admin dashboard provides real-time analytics, inventory management, and customer insights. Special attention was paid to mobile optimization, resulting in a 40% increase in mobile conversions.",
+        // githubUrl: "https://github.com/yourusername/ecommerce-platform",
+        liveUrl: "https://www.figma.com/proto/21nZNmwZV6EAy2bYpBUJ2M/UI1_RegistratioForm?page-id=0%3A1&node-id=24-23&viewport=372%2C214%2C0.3&t=nLCLfzcUcIcPgiE2-1&scaling=scale-down&content-scaling=fixed",
+        // linkedinUrl: "https://www.linkedin.com/in/yourprofile",
+        role: "Planning & Design",
+        duration: "2 weeks",
+        teamSize: "Own",
         // tags: ['Design', 'Figma'],
-        features: [
-            "Secure user authentication and authorization with JWT tokens",
-            "Real-time inventory tracking with automatic stock alerts",
-            "Integrated payment processing with Stripe and PayPal",
-            "Advanced product search with Elasticsearch and AI-powered recommendations",
-            "Order management system with shipment tracking",
-            "Responsive design optimized for mobile, tablet, and desktop",
-            "Admin dashboard with real-time analytics and reporting",
-            "Multi-currency support with automatic conversion"
-        ],
+        // features: [
+        //     "Secure user authentication and authorization with JWT tokens",
+        //     "Real-time inventory tracking with automatic stock alerts",
+        //     "Integrated payment processing with Stripe and PayPal",
+        //     "Advanced product search with Elasticsearch and AI-powered recommendations",
+        //     "Order management system with shipment tracking",
+        //     "Responsive design optimized for mobile, tablet, and desktop",
+        //     "Admin dashboard with real-time analytics and reporting",
+        //     "Multi-currency support with automatic conversion"
+        // ],
         timeline: [
             { phase: "Planning & Design", description: "Requirements gathering, user research, and system architecture design" },
-            { phase: "Development", description: "Core features implementation, API development, and frontend build" },
-            { phase: "Integration", description: "Payment gateway, shipping providers, and third-party service integration" },
-            { phase: "Testing & Launch", description: "Comprehensive testing, performance optimization, and production deployment" }
+            // { phase: "Development", description: "Core features implementation, API development, and frontend build" },
+            // { phase: "Integration", description: "Payment gateway, shipping providers, and third-party service integration" },
+            // { phase: "Testing & Launch", description: "Comprehensive testing, performance optimization, and production deployment" }
         ],
 
-        challenges: [
-            "Implementing secure payment processing while maintaining PCI compliance and protecting sensitive customer data",
-            "Optimizing database queries for catalogs with 100,000+ products while maintaining sub-second response times",
-            "Building a scalable architecture to handle traffic spikes during sales events, achieving 99.9% uptime"
-        ],
+        // challenges: [
+        //     "Implementing secure payment processing while maintaining PCI compliance and protecting sensitive customer data",
+        //     "Optimizing database queries for catalogs with 100,000+ products while maintaining sub-second response times",
+        //     "Building a scalable architecture to handle traffic spikes during sales events, achieving 99.9% uptime"
+        // ],
     },
     {
         id: "UI_Challenge_3",
@@ -183,74 +183,104 @@ export const CompletedProjects = [
         shortDescription: "This is a online website which they can sell or buy different category of clothes like Top Wears, Bottom Wears for Men, women and kids.",
         fullDescription: "A comprehensive e-commerce solution built with React and Node.js, featuring real-time inventory management, secure payment processing through Stripe, and a responsive shopping experience.",
         detailedDescription: "This enterprise-grade e-commerce platform was designed to handle high-volume transactions while maintaining exceptional performance and security. Built with a microservices architecture, the platform integrates seamlessly with payment gateways, inventory systems, and shipping providers. The admin dashboard provides real-time analytics, inventory management, and customer insights. Special attention was paid to mobile optimization, resulting in a 40% increase in mobile conversions.",
-        githubUrl: "https://github.com/yourusername/ecommerce-platform",
-        liveUrl: "https://demo-ecommerce.example.com",
+        // githubUrl: "https://github.com/yourusername/ecommerce-platform",
+        liveUrl: "https://www.figma.com/proto/oRTl0j9H33zClhOKtV1JEH/UI3_LandingPage_Spotify?page-id=0%3A1&node-id=1-2&viewport=1178%2C-78%2C0.72&t=xASZTsJqeTRPbuvQ-1&scaling=scale-down&content-scaling=fixed",
         linkedinUrl: "https://www.linkedin.com/in/yourprofile",
-        role: "Full-Stack Developer & Tech Lead",
-        duration: "6 months",
-        teamSize: "5 developers",
+        role: "Planning & Design",
+        duration: "2 weeks",
+        teamSize: "Own",
         // tags: ['Design', 'Figma'],
-        features: [
-            "Secure user authentication and authorization with JWT tokens",
-            "Real-time inventory tracking with automatic stock alerts",
-            "Integrated payment processing with Stripe and PayPal",
-            "Advanced product search with Elasticsearch and AI-powered recommendations",
-            "Order management system with shipment tracking",
-            "Responsive design optimized for mobile, tablet, and desktop",
-            "Admin dashboard with real-time analytics and reporting",
-            "Multi-currency support with automatic conversion"
-        ],
+        // features: [
+        //     "Secure user authentication and authorization with JWT tokens",
+        //     "Real-time inventory tracking with automatic stock alerts",
+        //     "Integrated payment processing with Stripe and PayPal",
+        //     "Advanced product search with Elasticsearch and AI-powered recommendations",
+        //     "Order management system with shipment tracking",
+        //     "Responsive design optimized for mobile, tablet, and desktop",
+        //     "Admin dashboard with real-time analytics and reporting",
+        //     "Multi-currency support with automatic conversion"
+        // ],
         timeline: [
             { phase: "Planning & Design", description: "Requirements gathering, user research, and system architecture design" },
-            { phase: "Development", description: "Core features implementation, API development, and frontend build" },
-            { phase: "Integration", description: "Payment gateway, shipping providers, and third-party service integration" },
-            { phase: "Testing & Launch", description: "Comprehensive testing, performance optimization, and production deployment" }
+
+            // { phase: "Planning & Design", description: "Requirements gathering, user research, and system architecture design" },
+            // { phase: "Development", description: "Core features implementation, API development, and frontend build" },
+            // { phase: "Integration", description: "Payment gateway, shipping providers, and third-party service integration" },
+            // { phase: "Testing & Launch", description: "Comprehensive testing, performance optimization, and production deployment" }
         ],
 
-        challenges: [
-            "Implementing secure payment processing while maintaining PCI compliance and protecting sensitive customer data",
-            "Optimizing database queries for catalogs with 100,000+ products while maintaining sub-second response times",
-            "Building a scalable architecture to handle traffic spikes during sales events, achieving 99.9% uptime"
-        ],
+        // challenges: [
+        //     "Implementing secure payment processing while maintaining PCI compliance and protecting sensitive customer data",
+        //     "Optimizing database queries for catalogs with 100,000+ products while maintaining sub-second response times",
+        //     "Building a scalable architecture to handle traffic spikes during sales events, achieving 99.9% uptime"
+        // ],
     },
     {
         id: "SafeSphere",
         imgSrc: SafeSphere,
         title: 'SafeSphere',
-        tags: ['Arduino Uno', 'MQ-32 sensor', 'DHT11 sensor'],
+        // tags: ['Arduino Uno', 'MQ-32 sensor', 'DHT11 sensor'],
+        tags: ['Arduino Uno', 'ESP8266 Wi-Fi Module', 'MQ-135 Gas Sensor', 'DHT11 Temperature Sensor', 'C/C++ (Arduino Programming)', 'ThingSpeak IoT', 'IoT Dashboard', 'Real-time Alerts', 'Embedded Systems', 'Sensor Data Collection', 'Python','Scikit-learn','Pandas','NumPy'],
+
         projectLink: 'https://github.com/Boopathy133/SafeSphere.git',
         shortDescription: "This is a online website which they can sell or buy different category of clothes like Top Wears, Bottom Wears for Men, women and kids.",
-        fullDescription: "A comprehensive e-commerce solution built with React and Node.js, featuring real-time inventory management, secure payment processing through Stripe, and a responsive shopping experience.",
-        detailedDescription: "This enterprise-grade e-commerce platform was designed to handle high-volume transactions while maintaining exceptional performance and security. Built with a microservices architecture, the platform integrates seamlessly with payment gateways, inventory systems, and shipping providers. The admin dashboard provides real-time analytics, inventory management, and customer insights. Special attention was paid to mobile optimization, resulting in a 40% increase in mobile conversions.",
-        githubUrl: "https://github.com/yourusername/ecommerce-platform",
-        liveUrl: "https://demo-ecommerce.example.com",
+        fullDescription: "This project aims to create a smart indoor safety device that detects harmful gases and abnormal temperature levels. It uses an MQ-135 gas sensor and a DHT11 temperature sensor, with an Arduino processing the readings and triggering alarms when unsafe conditions occur. Using an ESP8266 Wi-Fi module, the system sends real-time data to IoT platforms like ThingSpeak or Firebase for remote monitoring through a mobile app or dashboard.",
+        detailedDescription: "A key innovation is the AI predictive model trained on collected sensor data to classify or predict hazardous conditions, improving accuracy and reducing false alarms. The trained model can run on the cloud or an ESP32, making the final product a compact, wall-mounted device offering real-time alerts, smart predictions, and remote monitoring for homes, gas storage rooms, labs, and industries.",
+        githubUrl: "https://github.com/Boopathy133/SafeSphere.git",
+        // liveUrl: "https://demo-ecommerce.example.com",
         linkedinUrl: "https://www.linkedin.com/in/yourprofile",
-        role: "Full-Stack Developer & Tech Lead",
-        duration: "6 months",
-        teamSize: "5 developers",
-        // tags: ['Embedded C', 'IoT'],
+        role: "Initiator & Developer",
+        duration: "4 Days",
+        teamSize: "2 members & Me",
         features: [
-            "Secure user authentication and authorization with JWT tokens",
-            "Real-time inventory tracking with automatic stock alerts",
-            "Integrated payment processing with Stripe and PayPal",
-            "Advanced product search with Elasticsearch and AI-powered recommendations",
-            "Order management system with shipment tracking",
-            "Responsive design optimized for mobile, tablet, and desktop",
-            "Admin dashboard with real-time analytics and reporting",
-            "Multi-currency support with automatic conversion"
+            "Real-time gas detection using MQ-135 sensor",
+            "Temperature & humidity monitoring using DHT11",
+            "Instant alert system with buzzer & LED indicators",
+            "IoT-enabled live monitoring through ESP32",
+            "Mobile & web dashboard for viewing live sensor data",
+            "Early gas leak detection with predictive analytics",
+            "Automatic warning notifications",
+            "Supports multiple gases (CO₂, ammonia, smoke, unknown gases)"
         ],
         timeline: [
-            { phase: "Planning & Design", description: "Requirements gathering, user research, and system architecture design" },
-            { phase: "Development", description: "Core features implementation, API development, and frontend build" },
-            { phase: "Integration", description: "Payment gateway, shipping providers, and third-party service integration" },
-            { phase: "Testing & Launch", description: "Comprehensive testing, performance optimization, and production deployment" }
+            {
+                phase: "Research & Planning",
+                description: "Studying gas sensors, defining requirements, and designing the system architecture"
+            },
+            {
+                phase: "Hardware Assembly",
+                description: "Connecting MQ-135, DHT11, Arduino, ESP8266, and setting up the alert components"
+            },
+            {
+                phase: "Software Development",
+                description: "Programming sensor readings, threshold alerts, IoT data upload, and dashboard setup"
+            },
+            {
+                phase: "AI Model Training",
+                description: "Collecting sensor data, preprocessing and validating."
+            },
+            {
+                phase: "Integration & Testing",
+                description: "Combining hardware and IoT testing in real environments, and improving accuracy"
+            },
+            {
+                phase: "Product Finalization",
+                description: "Designing enclosure, optimizing power usage, preparing documentation, and readying final product"
+            }
+        ],
+        collaborators: [
+            // { name: "VISHALINI K", username: "vishalini723", linkedin: "https://www.linkedin.com/in/vishalini-k-it-student-5a7808257", portfolio: "https://vishalini723tech.netlify.app" },
+            { name: "MUKILAN B", username: "Mukilanbalakrishnan", linkedin: "https://www.linkedin.com/in/mukilan-balakrishnan-746a28291", portfolio: "https://mukilanportfolio.netlify.app" },
+            { name: "MOULIDHAR V T", username: "Moulid23"},
+
         ],
 
-        challenges: [
-            "Implementing secure payment processing while maintaining PCI compliance and protecting sensitive customer data",
-            "Optimizing database queries for catalogs with 100,000+ products while maintaining sub-second response times",
-            "Building a scalable architecture to handle traffic spikes during sales events, achieving 99.9% uptime"
-        ],
+
+        // challenges: [
+        //     "Implementing secure payment processing while maintaining PCI compliance and protecting sensitive customer data",
+        //     "Optimizing database queries for catalogs with 100,000+ products while maintaining sub-second response times",
+        //     "Building a scalable architecture to handle traffic spikes during sales events, achieving 99.9% uptime"
+        // ],
     },
     {
         id: "E_Commerce_Code",
@@ -262,8 +292,8 @@ export const CompletedProjects = [
         fullDescription: "I have created only the fronend of the website, which consists of categories for Men clothes like Shirts, Pants, inners etc., for Womes clothes like Tops, Skirts, Legins and for kids clothes like Shirts, pants and shoes etc.,",
         detailedDescription: "This has an interactive design for navigating from one category to another like Home page <-> Mens <-> Kids <-> Home <-> Login Page <-> Cart Page. This also contains Login page design. The main of the E-Commerce Website is Cart page. It Contains Cart Page Which show the Ordered Total price for the each user. User can add different products using 'Add To Cart' button and in the Cart page User can verfy their Carted items 'Name', 'Quantity', 'Price' of the each products and 'Total Price of the Carted Products'.",
         githubUrl: "https://github.com/Boopathy133/E-Commerce-Website.git",
-        liveUrl: "https://demo-ecommerce.example.com",
-        linkedinUrl: "https://www.linkedin.com/in/yourprofile",
+        // liveUrl: "https://demo-ecommerce.example.com",
+        // linkedinUrl: "https://www.linkedin.com/in/yourprofile",
         role: "Full-Stack Developer",
         duration: "2 months",
         teamSize: "Own",
@@ -293,45 +323,45 @@ export const CompletedProjects = [
         //     "Building a scalable architecture to handle traffic spikes during sales events, achieving 99.9% uptime"
         // ],
     },
-    {
-        id: "RailwayReservationSystem",
-        imgSrc: RailwayReservationSystem,
-        title: 'Railway Reservation System',
-        tags: ['Java', 'JavaFX', 'Wamp Server', 'Apache NetBeans'],
-        // projectLink: 'https://github.com/Boopathy133/E-Commerce-Website.git',
-        shortDescription: "This is a online website which they can sell or buy different category of clothes like Top Wears, Bottom Wears for Men, women and kids.",
-        fullDescription: "A comprehensive e-commerce solution built with React and Node.js, featuring real-time inventory management, secure payment processing through Stripe, and a responsive shopping experience.",
-        detailedDescription: "This enterprise-grade e-commerce platform was designed to handle high-volume transactions while maintaining exceptional performance and security. Built with a microservices architecture, the platform integrates seamlessly with payment gateways, inventory systems, and shipping providers. The admin dashboard provides real-time analytics, inventory management, and customer insights. Special attention was paid to mobile optimization, resulting in a 40% increase in mobile conversions.",
-        githubUrl: "https://github.com/yourusername/ecommerce-platform",
-        liveUrl: "https://demo-ecommerce.example.com",
-        linkedinUrl: "https://www.linkedin.com/in/yourprofile",
-        role: "Full-Stack Developer & Tech Lead",
-        duration: "6 months",
-        teamSize: "5 developers",
-        // tags: ['JAVA', 'JavaFX'],
-        features: [
-            "Secure user authentication and authorization with JWT tokens",
-            "Real-time inventory tracking with automatic stock alerts",
-            "Integrated payment processing with Stripe and PayPal",
-            "Advanced product search with Elasticsearch and AI-powered recommendations",
-            "Order management system with shipment tracking",
-            "Responsive design optimized for mobile, tablet, and desktop",
-            "Admin dashboard with real-time analytics and reporting",
-            "Multi-currency support with automatic conversion"
-        ],
-        timeline: [
-            { phase: "Planning & Design", description: "Requirements gathering, user research, and system architecture design" },
-            { phase: "Development", description: "Core features implementation, API development, and frontend build" },
-            { phase: "Integration", description: "Payment gateway, shipping providers, and third-party service integration" },
-            { phase: "Testing & Launch", description: "Comprehensive testing, performance optimization, and production deployment" }
-        ],
+    // {
+    //     id: "RailwayReservationSystem",
+    //     imgSrc: RailwayReservationSystem,
+    //     title: 'Railway Reservation System',
+    //     tags: ['Java', 'JavaFX', 'Wamp Server', 'Apache NetBeans'],
+    //     // projectLink: 'https://github.com/Boopathy133/E-Commerce-Website.git',
+    //     shortDescription: "This is a online website which they can sell or buy different category of clothes like Top Wears, Bottom Wears for Men, women and kids.",
+    //     fullDescription: "A comprehensive e-commerce solution built with React and Node.js, featuring real-time inventory management, secure payment processing through Stripe, and a responsive shopping experience.",
+    //     detailedDescription: "This enterprise-grade e-commerce platform was designed to handle high-volume transactions while maintaining exceptional performance and security. Built with a microservices architecture, the platform integrates seamlessly with payment gateways, inventory systems, and shipping providers. The admin dashboard provides real-time analytics, inventory management, and customer insights. Special attention was paid to mobile optimization, resulting in a 40% increase in mobile conversions.",
+    //     githubUrl: "https://github.com/yourusername/ecommerce-platform",
+    //     liveUrl: "https://demo-ecommerce.example.com",
+    //     linkedinUrl: "https://www.linkedin.com/in/yourprofile",
+    //     role: "Full-Stack Developer & Tech Lead",
+    //     duration: "6 months",
+    //     teamSize: "5 developers",
+    //     // tags: ['JAVA', 'JavaFX'],
+    //     features: [
+    //         "Secure user authentication and authorization with JWT tokens",
+    //         "Real-time inventory tracking with automatic stock alerts",
+    //         "Integrated payment processing with Stripe and PayPal",
+    //         "Advanced product search with Elasticsearch and AI-powered recommendations",
+    //         "Order management system with shipment tracking",
+    //         "Responsive design optimized for mobile, tablet, and desktop",
+    //         "Admin dashboard with real-time analytics and reporting",
+    //         "Multi-currency support with automatic conversion"
+    //     ],
+    //     timeline: [
+    //         { phase: "Planning & Design", description: "Requirements gathering, user research, and system architecture design" },
+    //         { phase: "Development", description: "Core features implementation, API development, and frontend build" },
+    //         { phase: "Integration", description: "Payment gateway, shipping providers, and third-party service integration" },
+    //         { phase: "Testing & Launch", description: "Comprehensive testing, performance optimization, and production deployment" }
+    //     ],
 
-        challenges: [
-            "Implementing secure payment processing while maintaining PCI compliance and protecting sensitive customer data",
-            "Optimizing database queries for catalogs with 100,000+ products while maintaining sub-second response times",
-            "Building a scalable architecture to handle traffic spikes during sales events, achieving 99.9% uptime"
-        ],
-    },
+    //     challenges: [
+    //         "Implementing secure payment processing while maintaining PCI compliance and protecting sensitive customer data",
+    //         "Optimizing database queries for catalogs with 100,000+ products while maintaining sub-second response times",
+    //         "Building a scalable architecture to handle traffic spikes during sales events, achieving 99.9% uptime"
+    //     ],
+    // },
     //     {
     //     id: "ecommerce-clothes-design",
     //     title: "E-Commerce Clothing Website Design",

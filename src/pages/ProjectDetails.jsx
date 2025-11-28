@@ -207,61 +207,7 @@ const ProjectDetails = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* <div className="relative w-full h-[70vh] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background z-10" />
-        <img
-          src={project.imgSrc}
-          alt={project.title}
-          className={`w-full h-full object-cover transition-all duration-1000 ${isVisible ? "scale-100" : "scale-110"}`}
-        />
-
-        <div className="absolute inset-0 z-20 flex items-end">
-          <div className="container mx-auto px-4 pb-16">
-            <Button
-              variant="ghost"
-              onClick={() => navigate(-1)}
-              className="mb-8 bg-background/80 backdrop-blur-sm hover:bg-background/90 group"
-            >
-              <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-              Back to Portfolio
-            </Button>
-
-            <div className={`max-w-4xl transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-2xl">{project.title}</h1>
-              <p className="text-xl md:text-2xl text-white/95 drop-shadow-lg">{project.shortDescription}</p>
-
-              <div className="flex flex-wrap gap-3">
-                {project.githubUrl && (
-                  <Button asChild size="lg" className="group shadow-lg">
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-                      View Code
-                    </a>
-                  </Button>
-                )}
-                {project.liveUrl && (
-                  <Button asChild size="lg" variant="secondary" className="group shadow-lg">
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-2 h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                      Live Demo
-                    </a>
-                  </Button>
-                )}
-                {project.linkedinUrl && (
-                  <Button asChild size="lg" variant="outline" className="group bg-white/90 hover:bg-white shadow-lg">
-                    <a href={project.linkedinUrl} target="_blank" rel="noopener noreferrer">
-                      <Linkedin className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                      Connect
-                    </a>
-                  </Button>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
-
+      {/* Hero Section */}
       <div className="relative w-full h-[70vh] overflow-hidden">
         {/* New Gradient Overlay – stronger fade at bottom */}
         <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-black/20 via-black/50 via-20% to-black/80"
@@ -386,42 +332,29 @@ const ProjectDetails = () => {
             </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <Separator className="my-12" />
 
             {/* Key Features */}
-            <section className="mb-16 animate-fade-in-right" style={{ animationDelay: "0.4s" }}>
-              <div className="flex items-center gap-3 mb-6">
-                <Zap className="h-6 w-6 text-primary" />
-                <h2 className="text-3xl font-bold">Key Features</h2>
-              </div>
-              <div className="grid gap-4">
-                {project.features.map((feature, index) => (
-                  <div
-                    key={index}
-                    className="flex items-start gap-4 p-4 rounded-lg hover:bg-muted/50 transition-colors group animate-fade-in"
-                    style={{ animationDelay: `${0.5 + index * 0.05}s` }}
-                  >
-                    <CheckCircle2 className="h-5 w-5 text-accent mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                    <p className="text-muted-foreground group-hover:text-foreground transition-colors">{feature}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
+            {project.features && project.features.length > 0 && (
+              <section className="mb-16 animate-fade-in-right" style={{ animationDelay: "0.4s" }}>
+                <div className="flex items-center gap-3 mb-6">
+                  <Zap className="h-6 w-6 text-primary" />
+                  <h2 className="text-3xl font-bold">Key Features</h2>
+                </div>
+                <div className="grid gap-4">
+                  {project.features.map((feature, index) => (
+                    <div
+                      key={index}
+                      className="flex items-start gap-4 p-4 rounded-lg hover:bg-muted/50 transition-colors group animate-fade-in"
+                      style={{ animationDelay: `${0.5 + index * 0.05}s` }}
+                    >
+                      <CheckCircle2 className="h-5 w-5 text-accent mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                      <p className="text-muted-foreground group-hover:text-foreground transition-colors">{feature}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
 
 
 
@@ -581,11 +514,7 @@ const ProjectDetails = () => {
                       return (
                         <motion.div
                           key={phase.phase + index}
-                          className={`
-                relative flex w-full
-                md:items-center
-                ${isLeft ? "md:justify-start" : "md:justify-end"}
-              `}
+                          className={` relative flex w-full md:items-center ${isLeft ? "md:justify-start" : "md:justify-end"}`}
                           initial={{ opacity: 0, y: 50 }}
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true, amount: 0.4 }}
@@ -594,9 +523,7 @@ const ProjectDetails = () => {
 
                           {/* Step Dot — Desktop Only */}
                           <motion.div
-                            className="hidden md:flex absolute left-1/2 -translate-x-1/2 
-                  w-7 h-7 rounded-full bg-white text-primary items-center 
-                  justify-center z-20 border-4 border-background shadow"
+                            className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-white text-primary items-center justify-center z-20 border-4 border-background shadow"
                             initial={{ scale: 0 }}
                             whileInView={{ scale: 1 }}
                             transition={{ duration: 0.5 }}
@@ -608,13 +535,7 @@ const ProjectDetails = () => {
 
                           {/* Card */}
                           <motion.div
-                            className={`
-                  relative
-                  w-full md:w-[46%]
-                  p-6 bg-card border border-border rounded-2xl shadow-md
-                  hover:shadow-xl transition-all duration-300
-                  ${isLeft ? "md:mr-auto md:-translate-x-6" : "md:ml-auto md:translate-x-6"}
-                `}
+                            className={` relative w-full md:w-[46%] p-6 bg-card border border-border rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 ${isLeft ? "md:mr-auto md:-translate-x-6" : "md:ml-auto md:translate-x-6"}`}
                             initial={{ opacity: 0, x: isLeft ? -60 : 60 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -749,7 +670,13 @@ const ProjectDetails = () => {
                       </Badge>
                     </div> */}
 
+
+
+
+
                     {/* Collaborators Section */}
+
+                    {/* Circle Design - Collaborators Section */}
                     {/* {project.collaborators && project.collaborators.length > 0 && (
                       <div>
                         <div className="text-sm text-muted-foreground mb-2">Collaborators</div>
@@ -808,51 +735,31 @@ const ProjectDetails = () => {
 
 
 
-
+                    {/* Card Design - Collaborators Section */}
                     {project.collaborators && project.collaborators.length > 0 && (
                       <div>
                         <div className="text-sm text-muted-foreground mb-2">Collaborators</div>
 
-                        <div className="flex space-x-2">
+                        <div className="flex space-x-3">
                           {project.collaborators.map((collab, idx) => (
                             <div
                               key={idx}
                               className="relative group"
                             >
                               {/* Avatar */}
-                              {/* <img
-                                src={`https://github.com/${collab.username}.png`}
-                                alt={collab.name}
-                                className="w-10 h-10 rounded-full border-2 border-white shadow cursor-pointer object-cover transition-transform duration-300 hover:scale-110 relative z-0 group-hover:z-10" // ✅ Bring to front on hover
-                                onClick={() => openMobileCard(collab)}
-                              /> */}
 
-
-                              {/* <div className="flex flex-col items-center">
+                              <div className="flex flex-col items-center ">
                                 <img
                                   src={`https://github.com/${collab.username}.png`}
                                   alt={collab.name}
-                                  className="w-10 h-10 rounded-full border-2 border-white shadow cursor-pointer object-cover transition-transform duration-300 hover:scale-110"
+                                  className="w-10 h-10 rounded-xl border-2 border-white shadow cursor-pointer object-cover transition-transform duration-300 hover:scale-110"
                                   onClick={() => openMobileCard(collab)}
                                 />
+                                <p className="text-[10px] mt-1 text-white font-medium">{collab.name}</p>
 
-                                <span className="text-xs mt-1 text-white-700 font-medium md:hidden">
-                                  {collab.name}
-                                </span>
-                              </div> */}
 
-                              <div
-                                key={collab.username}
-                                onClick={() => openMobileCard(collab)}
-                                className="flex flex-col items-center p-2 bg-transparent rounded-xl shadow hover:shadow-md transition cursor-pointer border border-white"
-                              >
-                                <img
-                                  src={`https://github.com/${collab.username}.png`}
-                                  alt={collab.name}
-                                  className="w-12 h-12 rounded-full object-cover"
-                                />
-                                <p className="text-xs mt-1 text-white font-medium">{collab.name}</p>
                               </div>
+
 
 
 
@@ -871,7 +778,7 @@ const ProjectDetails = () => {
                                   />
 
                                 </div>
-                                <div className="flex flex-col gap-2 text-xs">
+                                <div className="flex flex-col gap-3 text-xs">
                                   {collab.linkedin && (
                                     <a
                                       href={collab.linkedin}
