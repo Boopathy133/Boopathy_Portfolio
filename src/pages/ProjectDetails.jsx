@@ -230,7 +230,7 @@ const ProjectDetails = () => {
             <Button
               variant="ghost"
               onClick={() => navigate(-1)}
-              className="mb-20 bg-black/30 backdrop-blur-sm hover:bg-black/50 group text-white"
+              className="mb-36 bg-black/30 backdrop-blur-sm hover:bg-black/50 group text-white"
             >
               <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
               Back to Portfolio
@@ -904,10 +904,6 @@ const ProjectDetails = () => {
                         </a>
                       </Button>
                     )}
-                    <Button size="lg" onClick={() => navigate(-1)} variant="outline" className="w-full justify-start group">
-                      <ArrowLeft className="mr-2 h-4 w-full " />
-                      More Projects
-                    </Button>
                     {project.liveUrl && (
                       <Button asChild variant="outline" className="w-full justify-start group">
                         <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
@@ -916,14 +912,10 @@ const ProjectDetails = () => {
                         </a>
                       </Button>
                     )}
-                    {/* {project.linkedinUrl && (
-                      <Button asChild variant="outline" className="w-full justify-start group">
-                        <a href={project.linkedinUrl} target="_blank" rel="noopener noreferrer">
-                          <Linkedin className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
-                          Connect on LinkedIn
-                        </a>
-                      </Button>
-                    )} */}
+                    <Button size="lg" onClick={() => navigate(-1)} variant="outline" className="w-full justify-start group">
+                      <ArrowLeft className="mr-2 h-4 w-full " />
+                      More Projects
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
