@@ -17,7 +17,7 @@ export const CompletedProjects = [
         detailedDescription: "This enterprise-grade e-commerce platform was designed to handle high-volume transactions while maintaining exceptional performance and security. Built with a microservices architecture, the platform integrates seamlessly with payment gateways, inventory systems, and shipping providers. The admin dashboard provides real-time analytics, inventory management, and customer insights. Special attention was paid to mobile optimization, resulting in a 40% increase in mobile conversions.",
         githubUrl: "https://github.com/Boopathy133/E-Commerce_react.git",
         // liveUrl: "https://demo-ecommerce.example.com",
-        linkedinUrl: "https://www.linkedin.com/in/yourprofile",
+        // linkedinUrl: "https://www.linkedin.com/in/yourprofile",
         role: "Frontend Developement",
         duration: "3 Weeks",
         teamSize: "Own",
@@ -42,17 +42,14 @@ export const CompletedProjects = [
         ],
 
         // challenges: [
-        //     "Implementing secure payment processing while maintaining PCI compliance and protecting sensitive customer data",
-        //     "Optimizing database queries for catalogs with 100,000+ products while maintaining sub-second response times",
-        //     "Building a scalable architecture to handle traffic spikes during sales events, achieving 99.9% uptime"
+        //     "Sample Challenges"
         // ],
 
-        collaborators: [
-            // { name: "VISHALINI K", username: "vishalini723", linkedin: "https://www.linkedin.com/in/vishalini-k-it-student-5a7808257", portfolio: "https://vishalini723tech.netlify.app" },
-            // { name: "MUKILAN B", username: "Mukilanbalakrishnan", linkedin: "https://www.linkedin.com/in/mukilan-balakrishnan-746a28291", portfolio: "https://mukilanportfolio.netlify.app" },
+        // collaborators: [
+        //     { name: "VISHALINI K", username: "vishalini723", linkedin: "https://www.linkedin.com/in/vishalini-k-it-student-5a7808257", portfolio: "https://vishalini723tech.netlify.app" },
+        //     { name: "MUKILAN B", username: "Mukilanbalakrishnan", linkedin: "https://www.linkedin.com/in/mukilan-balakrishnan-746a28291", portfolio: "https://mukilanportfolio.netlify.app" },
 
-        ],
-
+        // ],
 
         projectLink: 'https://github.com/Boopathy133/E-Commerce-Website.git',
     },
@@ -67,11 +64,10 @@ export const CompletedProjects = [
         detailedDescription: "The Data Visualization Dashboard project is designed to create an advanced yet user-friendly interface that helps organizations interpret complex datasets with ease. The dashboard focuses on presenting information through interactive charts, graphs, and customizable widgets, allowing users to explore data dynamically and extract meaningful insights. Its primary objective is to support real-time monitoring, trend identification, and KPI tracking, enabling faster and more informed decision-making. \n A key part of the project includes conducting thorough user research to understand the specific needs, challenges, and workflows of the end users. These insights guide the design direction, ensuring that the platform is intuitive and aligns with real-world expectations. The dashboard undergoes an iterative design process, including wireframing, prototyping, and continuous refinement in Figma to enhance both usability and visual appeal.\n Scalability and flexibility are central to the design approach, giving users the ability to personalize their views, configure widgets, and generate custom reports. Rigorous usability testing and user feedback loops ensure that the final product is polished, reliable, and optimized for performance. Ultimately, the dashboard empowers stakeholders with a powerful tool for data-driven decision-making, helping organizations identify opportunities, monitor performance, and respond to trends effectively.",
         githubUrl: "https://github.com/Boopathy133/CoderOne-Project-1.git",
         liveUrl: "https://www.figma.com/design/4rIWnwwXjKMff9x9aOG4Y1/Dashboard?node-id=1-2&t=1MXxFu1kPlAnSv94-1",
-        linkedinUrl: "https://www.linkedin.com/in/yourprofile",
+        // linkedinUrl: "https://www.linkedin.com/in/yourprofile",
         role: "UI / UX Design",
         duration: "2 Hours",
         teamSize: "Own",
-        // tags: ['Design', 'Figma'],
         features: [
             "Dynamic charts, graphs, and widgets that update in real time for better insights.",
             "Users can rearrange, resize, or personalize widgets to match their workflow.",

@@ -550,9 +550,9 @@ const ProjectDetails = () => {
 
                 <div ref={containerRef} className="relative">
 
-                  {/* Curved line — hidden on mobile */}
+                  {/* Curved Line — Desktop Only */}
                   <svg
-                    className="absolute left-1/2 top-0 -translate-x-1/2 h-full w-32 opacity-40 hidden md:block"
+                    className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 h-full w-32 opacity-40"
                     viewBox="0 0 100 500"
                     preserveAspectRatio="none"
                   >
@@ -574,73 +574,70 @@ const ProjectDetails = () => {
                     </defs>
                   </svg>
 
-                  <div className="relative space-y-20 md:space-y-28">
+                  <div className="relative space-y-20">
                     {project.timeline.map((phase, index) => {
                       const isLeft = index % 2 === 0;
 
                       return (
                         <motion.div
                           key={phase.phase + index}
-                          className={`relative flex w-full 
-                ${isLeft ? "justify-start" : "justify-end"} 
-                md:flex-row 
-                flex-col
+                          className={`
+                relative flex w-full
+                md:items-center
+                ${isLeft ? "md:justify-start" : "md:justify-end"}
               `}
-                          initial={{ opacity: 0, y: 80 }}
+                          initial={{ opacity: 0, y: 50 }}
                           whileInView={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.7, delay: index * 0.15 }}
                           viewport={{ once: true, amount: 0.4 }}
+                          transition={{ duration: 0.7 }}
                         >
 
-                          {/* Center Dot — hidden on mobile */}
+                          {/* Step Dot — Desktop Only */}
                           <motion.div
-                            className="absolute left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-white text-primary items-center justify-center z-20 border-4 border-background shadow hidden md:flex"
+                            className="hidden md:flex absolute left-1/2 -translate-x-1/2 
+                  w-7 h-7 rounded-full bg-white text-primary items-center 
+                  justify-center z-20 border-4 border-background shadow"
                             initial={{ scale: 0 }}
                             whileInView={{ scale: 1 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            viewport={{ once: true }}
+                            transition={{ duration: 0.5 }}
                           >
-                            <span className="text-xs font-medium text-foreground">
+                            <span className="text-xs font-medium">
                               {index + 1}
                             </span>
                           </motion.div>
 
-                          {/* CARD */}
+                          {/* Card */}
                           <motion.div
-                            className={`relative p-6 bg-card border border-border rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 md:w-[46%] ${isLeft ? "md:mr-auto md:-translate-x-6" : "md:ml-auto md:translate-x-6"} w-full mx-auto`}
+                            className={`
+                  relative
+                  w-full md:w-[46%]
+                  p-6 bg-card border border-border rounded-2xl shadow-md
+                  hover:shadow-xl transition-all duration-300
+                  ${isLeft ? "md:mr-auto md:-translate-x-6" : "md:ml-auto md:translate-x-6"}
+                `}
                             initial={{ opacity: 0, x: isLeft ? -60 : 60 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true, amount: 0.6 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
-                            whileHover={{ scale: 1.02 }}
                           >
                             <div className="flex items-center gap-2 mb-2">
                               <Zap className="h-4 w-4 text-primary" />
-                              <h3 className="text-lg font-semibold text-foreground">
-                                {phase.phase}
-                              </h3>
+                              <h3 className="text-lg font-semibold">{phase.phase}</h3>
                             </div>
 
                             <p className="text-muted-foreground leading-relaxed text-sm">
                               {phase.description}
                             </p>
-
-                            {/* Arrow connector — hidden on mobile */}
-                            <motion.div
-                              className={`absolute top-1/2 -translate-y-1/2 hidden md:block ${isLeft ? "right-[-35px]" : "left-[-35px]"} `}
-                              initial={{ opacity: 0, x: isLeft ? -20 : 20 }}
-                              whileInView={{ opacity: 1, x: 0 }}
-                              transition={{ duration: 0.6 }}
-                              viewport={{ once: true }}
-                            />
                           </motion.div>
+
                         </motion.div>
                       );
                     })}
                   </div>
+
                 </div>
               </section>
             )}
+
 
 
 
@@ -816,19 +813,49 @@ const ProjectDetails = () => {
                       <div>
                         <div className="text-sm text-muted-foreground mb-2">Collaborators</div>
 
-                        <div className="flex -space-x-3">
+                        <div className="flex space-x-2">
                           {project.collaborators.map((collab, idx) => (
                             <div
                               key={idx}
                               className="relative group"
                             >
                               {/* Avatar */}
-                              <img
+                              {/* <img
                                 src={`https://github.com/${collab.username}.png`}
                                 alt={collab.name}
                                 className="w-10 h-10 rounded-full border-2 border-white shadow cursor-pointer object-cover transition-transform duration-300 hover:scale-110 relative z-0 group-hover:z-10" // ✅ Bring to front on hover
-                                onClick={() => openMobileCard(collab)} // OPEN on mobile
-                              />
+                                onClick={() => openMobileCard(collab)}
+                              /> */}
+
+
+                              {/* <div className="flex flex-col items-center">
+                                <img
+                                  src={`https://github.com/${collab.username}.png`}
+                                  alt={collab.name}
+                                  className="w-10 h-10 rounded-full border-2 border-white shadow cursor-pointer object-cover transition-transform duration-300 hover:scale-110"
+                                  onClick={() => openMobileCard(collab)}
+                                />
+
+                                <span className="text-xs mt-1 text-white-700 font-medium md:hidden">
+                                  {collab.name}
+                                </span>
+                              </div> */}
+
+                              <div
+                                key={collab.username}
+                                onClick={() => openMobileCard(collab)}
+                                className="flex flex-col items-center p-2 bg-transparent rounded-xl shadow hover:shadow-md transition cursor-pointer border border-white"
+                              >
+                                <img
+                                  src={`https://github.com/${collab.username}.png`}
+                                  alt={collab.name}
+                                  className="w-12 h-12 rounded-full object-cover"
+                                />
+                                <p className="text-xs mt-1 text-white font-medium">{collab.name}</p>
+                              </div>
+
+
+
 
                               {/* DESKTOP Hover Card */}
                               <div
@@ -850,9 +877,9 @@ const ProjectDetails = () => {
                                       href={collab.linkedin}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      className="flex items-center gap-2 text-blue-600 hover:underline"
+                                      className="flex items-center gap-2 text-blue-600 hover:underline text-[13px]"
                                     >
-                                      <FaLinkedin className="w-3 h-3" />
+                                      <FaLinkedin className="w-3 h-3 text" />
                                       LinkedIn
                                     </a>
                                   )}
@@ -862,9 +889,9 @@ const ProjectDetails = () => {
                                       href={collab.portfolio}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      className="flex items-center gap-2 text-blue-600 hover:underline"
+                                      className="flex items-center gap-2 text-blue-600 hover:underline text-[13px]"
                                     >
-                                      <BsGlobe className="w-3 h-3" />
+                                      <BsGlobe className="w-3 h-3 text" />
                                       Portfolio
                                     </a>
                                   )}
@@ -873,9 +900,9 @@ const ProjectDetails = () => {
                                     href={`https://github.com/${collab.username}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-gray-800 hover:underline"
+                                    className="flex items-center gap-2 text-gray-800 hover:underline text-[13px]"
                                   >
-                                    <FaGithub className="w-3 h-3" />
+                                    <FaGithub className="w-3 h-3 text" />
                                     GitHub
                                   </a>
                                 </div>

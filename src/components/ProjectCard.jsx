@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 const ProjectCard = ({ id, imgSrc, title, tags, projectLink, classes }) => {
     const navigate = useNavigate();
     return (
-        <div className={"relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60  ring-1 ring-inset ring-zinc-50/5 transition-colors" + classes}>
+        <div className={"cursor-pointer relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60  ring-1 ring-inset ring-zinc-50/5 transition-colors" + classes} onClick={()=> navigate(`/projects/${id}`)}>
             <figure className="img-box aspect-square rounded-lg mb-4">
                 <img src={imgSrc} alt={title} loading='lazy' className="img-cover" />
             </figure>
@@ -35,13 +35,13 @@ const ProjectCard = ({ id, imgSrc, title, tags, projectLink, classes }) => {
 
                 </div>
 
-                <div className="w-11 h-11 rounded-lg grid place-items-center bg-sky-400 text-zinc-950 shrink-0 cursor-pointer" >
+                {/* <div className="w-11 h-11 rounded-lg grid place-items-center bg-sky-400 text-zinc-950 shrink-0 cursor-pointer" >
 
                     <span className="material-symbols-rounded" aria-hidden='true' onClick={() => navigate(`/projects/${id}`)}>
                         arrow_outward
                     </span>
 
-                </div>
+                </div> */}
 
             </div>
 
