@@ -1,12 +1,12 @@
 import React from 'react'
 import ReviewCard from './ReviewCard';
 
-import people1 from "../assets/people-1.jpg"
-import people2 from "../assets/people-2.jpg"
-import people3 from "../assets/people-3.jpg"
-import people4 from "../assets/people-4.jpg"
-import people5 from "../assets/people-5.jpg"
-import people6 from "../assets/people-6.jpg"
+// import people1 from "../assets/people-1.jpg"
+// import people2 from "../assets/people-2.jpg"
+// import people3 from "../assets/people-3.jpg"
+// import people4 from "../assets/people-4.jpg"
+// import people5 from "../assets/people-5.jpg"
+// import people6 from "../assets/people-6.jpg"
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
